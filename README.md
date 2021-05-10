@@ -2,12 +2,10 @@
 
 ## Software Engineering Project
 #### This is a MERN stack application for hostel booking specially aimed towards students
-#### The App is deployed at https://khoj--a-portal-for-aspirants.herokuapp.com
-#### The Demo for the following application can be found at https://youtu.be/13fPLRawYxA
 ##### To run the application :
 
 ```
-git clone https://github.com/anuj-kh/Khoj--Hostel-Booking-Application.git
+git clone https://github.com/Hoanghieu003/Hotel-Booking-Application.git
 ```
 ### For Server:
 Create a cluster on MongoDB, then create ID and password for its access and then add those to line 22 inside [index.js](./index.js) file
