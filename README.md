@@ -1,4 +1,3 @@
-# KHOJ--A-portal-for-aspirants
 
 ## Software Engineering Project
 #### This is a MERN stack application for hostel booking specially aimed towards students
