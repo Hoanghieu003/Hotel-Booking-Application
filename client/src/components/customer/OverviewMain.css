@@ -1,0 +1,14 @@
+.map {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 40px;
+    margin-top: 8px;
+    border: #282b4b solid 1px;
+    border-radius: 5px;
+    /* height: 302px; */
+    background: #262842;
+
+    /* padding :10px; */
+}
