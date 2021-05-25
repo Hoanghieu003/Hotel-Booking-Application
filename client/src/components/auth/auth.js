@@ -82,7 +82,7 @@ const Auth = () => {
     {
       (async () => {
         const a = await dispatch(signin(form, history));
-        if(a!=null)
+        if(a)
           setError(a);
       })();
     }
@@ -91,7 +91,7 @@ const Auth = () => {
         const result = res?.profileObj;
         (async () => {
             const a = await dispatch(gSignin(result, history))
-            if (a != null) setError(a)
+            if (a) setError(a)
         })()
     }
     const googleError = () =>

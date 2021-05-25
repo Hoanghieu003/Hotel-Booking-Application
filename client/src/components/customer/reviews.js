@@ -133,115 +133,123 @@ const Reviews = () => {
             <Navbar />
             <br />
             <br />
-            <div
-                style={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                }}>
-                <div>
-                    <h1 className={classes.cent}>Your Reviews</h1>
-                    <br />
-                    <br />
+            {(currentBook || prevBook) ?
+            (
+                <>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                    }}>
+                    <div>
+                        <h1 className={classes.cent}>Your Reviews</h1>
+                        <br />
+                        <br />
 
-                    {reviews != null &&
-                        reviews.map((rev) => (
-                            <div className={classes.root} key={i++}>
-                                <ReviewCard
-                                    title={rev.hostel}
-                                    value={rev.comment}
-                                    date={rev.date.toString().substring(0, 10)}
-                                    width='500px'
-                                    height='100px'
-                                />
-                            </div>
-                        ))}
-                </div>
-                <div>
-                    <h1 className={classes.cent}>Your Complaints</h1>
-                    <br />
-                    <br />
+                        {reviews &&
+                            reviews.map((rev) => (
+                                <div className={classes.root} key={i++}>
+                                    <ReviewCard
+                                        title={rev.hostel}
+                                        value={rev.comment}
+                                        date={rev.date.toString().substring(0, 10)}
+                                        width='500px'
+                                        height='100px'
+                                    />
+                                </div>
+                            ))}
+                    </div>
+                    <div>
+                        <h1 className={classes.cent}>Your Complaints</h1>
+                        <br />
+                        <br />
 
-                    {complaints != null &&
-                        complaints.map((complaint) => (
-                            <div className={classes.root} key={i++}>
-                                <ReviewCard
-                                    title={complaint.hostel}
-                                    value={complaint.comment}
-                                    date={complaint.date.toString().substring(0, 10)}
-                                    width='500px'
-                                    height='100px'
-                                />
-                            </div>
-                        ))}
-                </div>
-            </div>
-            <br />
-            <form className={classes.root} noValidate autoComplete='off'>
-                <div>
-                    <FormControl className={classes.formControl} required>
-                        <InputLabel>Hostel</InputLabel>
-                        <Select
-                            name='hostel'
-                            id='hostel'
-                            label='Hostel'
-                            value={value.hostel}
-                            className={classes.formControl}
-                            onChange={handleChange2}>
-                            {currentBook != null &&
-                                currentBook.map((i) => (
-                                    <MenuItem value={i.hostel._id}>
-                                        {i.hostel.name}
-                                    </MenuItem>
-                                ))}
-                            {prevBook != null &&
-                                prevBook.map((i) => (
-                                    <MenuItem value={i.hostel._id}>
-                                        {i.hostel.name}
-                                    </MenuItem>
-                                ))}
-                        </Select>
-                    </FormControl>
-
-                    <TextField
-                        id='comment'
-                        label='Review/Complaint'
-                        style={{ marginTop: 10 }}
-                        placeholder='Please write your review/complaint'
-                        value={value.comment}
-                        fullWidth
-                        multiline
-                        rows={3}
-                        // InputLabelProps={{
-                        //     shrink: true,
-                        // }}
-                        variant='outlined'
-                        onChange={handleChange}
-                    />
-                    <div
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-around',
-                        }}>
-                        <Button
-                            type='submit'
-                            onClick={handleClick}
-                            style={{ marginTop: 10 }}
-                            variant='contained'>
-                            Submit Review
-                        </Button>
-                        <Button
-                            type='submit'
-                            onClick={handleClick2}
-                            style={{ marginTop: 10 }}
-                            variant='contained'>
-                            Submit Complaint
-                        </Button>
+                        {complaints &&
+                            complaints.map((complaint) => (
+                                <div className={classes.root} key={i++}>
+                                    <ReviewCard
+                                        title={complaint.hostel}
+                                        value={complaint.comment}
+                                        date={complaint.date.toString().substring(0, 10)}
+                                        width='500px'
+                                        height='100px'
+                                    />
+                                </div>
+                            ))}
                     </div>
                 </div>
-            </form>
-            <div className={classes.errorDiv} style={{ color: `${cl}` }}>
-                {error}
-            </div>
+                <br />
+                <form className={classes.root} noValidate autoComplete='off'>
+                    <div>
+                        <FormControl className={classes.formControl} required>
+                            <InputLabel>Hostel</InputLabel>
+                            <Select
+                                name='hostel'
+                                id='hostel'
+                                label='Hostel'
+                                value={value.hostel}
+                                className={classes.formControl}
+                                onChange={handleChange2}>
+                                {currentBook &&
+                                    currentBook.map((i) => (
+                                        <MenuItem value={i.hostel._id}>
+                                            {i.hostel.name}
+                                        </MenuItem>
+                                    ))}
+                                {prevBook &&
+                                    prevBook.map((i) => (
+                                        <MenuItem value={i.hostel._id}>
+                                            {i.hostel.name}
+                                        </MenuItem>
+                                    ))}
+                            </Select>
+                        </FormControl>
+
+                        <TextField
+                            id='comment'
+                            label='Review/Complaint'
+                            style={{ marginTop: 10 }}
+                            placeholder='Please write your review/complaint'
+                            value={value.comment}
+                            fullWidth
+                            multiline
+                            rows={3}
+                            // InputLabelProps={{
+                            //     shrink: true,
+                            // }}
+                            variant='outlined'
+                            onChange={handleChange}
+                        />
+                        <div
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'space-around',
+                            }}>
+                            <Button
+                                type='submit'
+                                onClick={handleClick}
+                                style={{ marginTop: 10 }}
+                                variant='contained'>
+                                Submit Review
+                            </Button>
+                            <Button
+                                type='submit'
+                                onClick={handleClick2}
+                                style={{ marginTop: 10 }}
+                                variant='contained'>
+                                Submit Complaint
+                            </Button>
+                        </div>
+                    </div>
+                </form>
+                <div className={classes.errorDiv} style={{ color: `${cl}` }}>
+                    {error}
+                </div>
+            </>
+            )
+            :
+            (<h1 style={{width: 800, margin: "auto" }}>You need to stay at least 1 hotel to review or complaint</h1>)}
+
         </>
     )
 }

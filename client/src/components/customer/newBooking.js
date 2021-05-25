@@ -69,8 +69,7 @@ const NewBooking = () => {
         </div>
 
 
-        { startDate &&
-            hostels.map((rev) => (
+        { hostels.map((rev) => (
                 <div className={classes.root} key={rev._id}>
                     <NewBookingCard
                         name={rev.name}
