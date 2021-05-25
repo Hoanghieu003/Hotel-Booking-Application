@@ -25,7 +25,7 @@ export default function BookingTable(props) {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow  key={0}>
-            <TableCell className={classes.heading}>Name of the Student</TableCell>
+            <TableCell className={classes.heading}>Name of the Renter</TableCell>
             <TableCell align="right" className={classes.heading}>Booking Date</TableCell>
             <TableCell align="right" className={classes.heading}>Subscription Start Date</TableCell>
             <TableCell align="right" className={classes.heading}>Subscription End Date</TableCell>

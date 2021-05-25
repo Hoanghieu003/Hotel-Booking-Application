@@ -18,7 +18,7 @@ const Main = () => {
             <Navbar />
             <br />
             <br />
-            <h1 className={classes.cent}>Welcome to KHOJ</h1>
+            <h1 className={classes.cent}>Welcome to Hotel</h1>
             <br />
             <OverviewBar />
             <br />

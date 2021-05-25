@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './navbar'
 import { makeStyles, Grid, Button } from '@material-ui/core' 
-
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 import DatePicker from "react-datepicker";  
@@ -60,6 +60,7 @@ const Hostel = (props) => {
     const todayDate=new Date();
     const [error, setError] = useState("");
     const localStorageId = JSON.parse(localStorage.getItem('profile')).result._id;
+    const history = useHistory();
     useEffect(() => {
         const fetchHostel = async () => {
             const res = await axios.get(
@@ -123,6 +124,7 @@ const Hostel = (props) => {
                         localStorage.setItem('profile', JSON.stringify({ ...data }));
                     cl='green';
                     setError("You are successfully registered to this hostel!!");
+                    history.push("/dashboard/payment")
                 } 
                 catch (e) 
                 {

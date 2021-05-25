@@ -74,7 +74,7 @@ const Navbar = () => {
 
                 <List edge="start" component="nav" className={classes.nav} >
                     <Grid container spacing={0} align="center" justify="center" direction="column" >
-                        <h1>KHOJ</h1>
+                        <h1>Hotel</h1>
                         A Portal for Aspirants
                     </Grid>
                 </List>

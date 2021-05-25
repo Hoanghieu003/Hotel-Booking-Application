@@ -33,7 +33,7 @@ const OverviewBar = () => {
     return (
         <div className={classes.root}>  
             <OverviewBarTile title='Your Hostel' value={curHostel} /> 
-            <OverviewBarTile title='Current students' value={curStudents} />
+            <OverviewBarTile title='Current renters' value={curStudents} />
             <OverviewBarTile title='Current dues' value={dues} />
         </div>  
     )

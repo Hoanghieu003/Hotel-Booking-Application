@@ -10,7 +10,7 @@ function App() {
     return (
         <BrowserRouter history={history}>
             <Helmet>
-                <title> {'KHOJ - A portal for aspirants'} </title>
+                <title> {'Hotel - A portal for aspirants'} </title>
             </Helmet>
             <div>
                 <Route
@@ -27,7 +27,7 @@ function App() {
                     render={() =>
                         !localStorage.getItem('profile') ? (
                             <Redirect to='/auth' />
-                        ) : 
+                        ) :
                         JSON.parse(localStorage.getItem('profile')).result.user==="Student" ? (
                             <Dashboard />
                         ) : (

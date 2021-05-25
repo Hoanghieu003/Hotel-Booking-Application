@@ -38,7 +38,7 @@ const Main = () => {
             <Navbar />
             <br />
             <br />
-            <h1 className={classes.cent}>Welcome to KHOJ</h1>
+            <h1 className={classes.cent}>Welcome to HOTEL</h1>
             <br />
             <OverviewBar />
             <br />
@@ -53,11 +53,11 @@ const Main = () => {
                     justifyContent: 'space-around',
                 }}>
                 <div>
-                    <h3 className={classes.cent}>Students registered:</h3>
+                    <h3 className={classes.cent}>Renters registered:</h3>
 
                 </div>
                 <div>
-                    <h3 className={classes.cent}>Students subscription started:</h3>
+                    <h3 className={classes.cent}>Renters subscription started:</h3>
                 </div>
             </div>
 
@@ -77,7 +77,7 @@ const Main = () => {
                     justifyContent: 'space-around',
                 }}>
                 <div>
-                    <h3 className={classes.cent}>Students subscription ended:</h3>
+                    <h3 className={classes.cent}>Renters subscription ended:</h3>
 
                 </div>
                 <div>

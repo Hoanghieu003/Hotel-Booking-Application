@@ -164,7 +164,7 @@ const Auth = () => {
                                         className={classes.formControl}
                                         onChange={handleChange}>
                                         <MenuItem value={'Student'}>
-                                            Student
+                                            Renter
                                         </MenuItem>
                                         <MenuItem value={'Service Provider'}>
                                             Service Provider
