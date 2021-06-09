@@ -89,10 +89,10 @@ const Payment = () => {
                             }
                             setError('Payment succesful!!')
                         }}
-                        // options={{
-                        //     clientId:
-                        //         'AXWKfCDIvRNyym5FJy-xsHTkOIzhkGiT-b_HBuMXlZfnIn5XHZiFUF6y5TySSEP2Hmm52MU1MaG_IEz3',
-                        // }}
+                        options={{
+                            clientId:
+                                'AWXSg9xy04SPVtVAVNtbXgmaOEzbGlR2IvPbdouHWpdrbM243-5WtflfdTDGfXf0AzlEbtc7vmo69fXQ',
+                        }}
                     />
                 </div>
                 <div style={{ color: `${cl}` }}>{error}</div>

@@ -56,5 +56,7 @@ class OverviewMain extends Component {
     }
 }
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyBTRwW2ik4LhX0gxOGLmRYMuSuGh3ZRE9U",
+    // apiKey: "AIzaSyBTRwW2ik4LhX0gxOGLmRYMuSuGh3ZRE9U",
+    apiKey: 'AIzaSyCzpzqgrjadRHloEtZovwaCjV7wqKxg8Qk',
+
 })(OverviewMain)

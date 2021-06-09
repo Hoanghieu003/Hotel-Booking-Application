@@ -19,8 +19,9 @@ app.use('/hostel', hostel)
 
 const PORT = process.env.PORT || 5000
 
-const CONNECTION_URL = "mongodb+srv://hoanghieu003:hoangHieu@1999@hieucluster.o53f8.mongodb.net/hotel?retryWrites=true&w=majority"
-
+// const CONNECTION_URL = "mongodb+srv://hoanghieu003:hoangHieu@1999@hieucluster.o53f8.mongodb.net/hotel?retryWrites=true&w=majority"
+// const CONNECTION_URL = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@users.kn06n.mongodb.net/users?retryWrites=true&w=majority`
+const CONNECTION_URL = 'mongodb+srv://user1:khoj123@users.kn06n.mongodb.net/users?retryWrites=true&w=majority'
 mongoose
     .connect(process.env.MONGODB_URI || CONNECTION_URL , {
         useNewUrlParser: true,
